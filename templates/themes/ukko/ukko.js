@@ -26,23 +26,23 @@ $(document).ready(function() {
 		$(this).append(hr);
 
 		if (hiddenboards[board] !== true) {
-			ukkohide.html(_("(hide threads from this board)"));
+			ukkohide.html(_(" (hide threads from this board)"));
 			hr.hide();
 		}
 		else {
-			ukkohide.html(_("(show threads from this board)"));
+			ukkohide.html(_(" (show threads from this board)"));
 			$(this).next().hide();
 		}
 		ukkohide.click(function() {
 			hiddenboards[board] = (hiddenboards[board] !== true);
 			if (hiddenboards[board] !== true) {
                         	$('[data-board="'+board+'"]:not([data-cached="yes"])').show().prev().
-					find('.ukkohide').html(_("(hide threads from this board)")).
+					find('.ukkohide').html(_(" (hide threads from this board)")).
 					parent().find('hr').hide();
                 	}
                 	else {
                         	$('[data-board="'+board+'"]:not([data-cached="yes"])').hide().prev().
-					find('.ukkohide').html(_("(show threads from this board)"))
+					find('.ukkohide').html(_(" (show threads from this board)"))
 					.parent().find('hr').show();
                 	}
 			storeboards();

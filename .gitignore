@@ -49,7 +49,6 @@ favicon.ico
 
 /vendor/
 
-
-recent.css
+*.css
 boards.json
-index.css
+*/index.rss
