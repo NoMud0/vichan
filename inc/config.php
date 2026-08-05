@@ -557,14 +557,11 @@
 	$config['link_prefix'] = '';
 	$config['url_ads'] = &$config['link_prefix'];	 // leave alias
 
-	// Allow "uploading" images via URL as well. Users can enter the URL of the image and then vichan will
-	// download it. Not usually recommended.
-	$config['allow_upload_by_url'] = false;
 	// The timeout for the above, in seconds.
 	$config['upload_by_url_timeout'] = 15;
 
-	// Enable early 404? With default settings, a thread would 404 if it was to leave page 3, if it had less
-	// than 3 replies.
+	// Enable early 404? With default settings, a thread would 404 if it was to leave page 'early_404_page', if it had less
+	// than 'early_404_replies'.
 	$config['early_404'] = false;
 
 	$config['early_404_page'] = 3;

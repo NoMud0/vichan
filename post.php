@@ -67,64 +67,6 @@ function strip_symbols($input) {
 }
 
 /**
- * Download a remote file from the given url.
- * The file is deleted at shutdown.
- *
- * @param HttpDriver $http The http client.
- * @param string $file_url The url to download the file from.
- * @param int $request_timeout Timeout to retrieve the file.
- * @param array $extra_extensions Allowed file extensions.
- * @param string $tmp_dir Temporary directory to save the file into.
- * @param array $error_array An array with error codes, used to create exceptions on failure.
- * @return array|false Returns an array describing the file on success, or false if the file was too large
- * @throws InvalidArgumentException|RuntimeException Throws on invalid arguments and IO errors.
- */
-function download_file_from_url(HttpDriver $http, $file_url, $request_timeout, $allowed_extensions, $tmp_dir, &$error_array) {
-	if (!preg_match('@^https?://@', $file_url)) {
-		throw new InvalidArgumentException($error_array['invalidimg']);
-	}
-
-	$param_idx = mb_strpos($file_url, '?');
-	if ($param_idx !== false) {
-		$url_without_params = mb_substr($file_url, 0, $param_idx);
-	} else {
-		$url_without_params = $file_url;
-	}
-
-	$extension = strtolower(mb_substr($url_without_params, mb_strrpos($url_without_params, '.') + 1));
-
-	if (!in_array($extension, $allowed_extensions)) {
-		throw new InvalidArgumentException($error_array['unknownext']);
-	}
-
-	$tmp_file = tempnam($tmp_dir, 'url');
-	function unlink_tmp_file($file) {
-		@unlink($file);
-		fatal_error_handler();
-	}
-	register_shutdown_function('unlink_tmp_file', $tmp_file);
-
-	$fd = fopen($tmp_file, 'w');
-
-	try {
-		$success = $http->requestGetInto($url_without_params, null, $fd, $request_timeout);
-		if (!$success) {
-			return false;
-		}
-	} finally {
-		fclose($fd);
-	}
-
-	return array(
-		'name' => basename($url_without_params),
-		'tmp_name' => $tmp_file,
-		'file_tmp' => true,
-		'error' => 0,
-		'size' => filesize($tmp_file)
-	);
-}
-
-/**
  * Try extract text from the given image.
  *
  * @param array $config Instance configuration.
@@ -766,35 +708,6 @@ if (isset($_POST['delete'])) {
 
 		if ($config['field_disable_subject'] || (!$post['op'] && $config['field_disable_reply_subject']))
 			$_POST['subject'] = '';
-	}
-
-	if ($config['allow_upload_by_url'] && isset($_POST['file_url']) && !empty($_POST['file_url'])) {
-		$allowed_extensions = $config['allowed_ext_files'];
-
-		// Add allowed extensions for OP, if enabled.
-		if ($post['op'] && $config['allowed_ext_op']) {
-			array_merge($allowed_extensions, $config['allowed_ext_op']);
-		}
-
-		try {
-			$ret = download_file_from_url(
-				$context->get(HttpDriver::class),
-				$_POST['file_url'],
-				$config['upload_by_url_timeout'],
-				$allowed_extensions,
-				$config['tmp'],
-				$config['error']
-			);
-			if ($ret === false) {
-				error(sprintf3($config['error']['filesize'], array(
-					'filesz' => 'more than that',
-					'maxsz' => number_format($config['max_filesize'])
-				)));
-			}
-			$_FILES['file'] = $ret;
-		} catch (Exception $e) {
-			error($e->getMessage());
-		}
 	}
 
 	$post['name'] = $_POST['name'] != '' ? $_POST['name'] : $config['anonymous'];
