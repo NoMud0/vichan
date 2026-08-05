@@ -1,11 +1,9 @@
 /*Caffe style*/
 
-
 .floatiframe{
-float:left;
-padding:10px;
+	float:left;
+	padding:10px;
 }
-
 
 div.boardlist {
     color: #261712;
@@ -24,12 +22,9 @@ div.boardlist.bottom {
     background:inherit;
 }
 
-
-
 .return1 a{
-float:left;
-font-size: inherit;
-
+	float:left;
+	font-size: inherit;
 }
 
 div.blotter {
@@ -44,21 +39,18 @@ div.blotter {
     text-align: center;
 }
 
-
-
 div.title {
     margin-bottom: 0px;
     clear: both;
     color: #39241d;
     font-size: 2em;
     font-weight: bold;
-
 }
 
 div.ban h2 {
     border-radius: 6px 6px 6px 6px;
-        background: none repeat scroll 0 0  #261712;
-        color: #8f6658;
+    background: none repeat scroll 0 0  #261712;
+    color: #8f6658;
 }
 
 div.ban {
@@ -67,13 +59,11 @@ div.ban {
     margin: 30px auto;
     max-width: 700px;
     border-radius: 7px;
-
 }
 
 form {
     margin-bottom: 0px;
 }
-
 
 form {
     margin-bottom: 0px;
@@ -86,97 +76,111 @@ span.heading {
     font-weight: bold;
 }
 
-textarea#body{
+textarea#body {
     height: 136px;
     width: 518px;
 }
 
-
-
 html, body {
-        background:#261712 url('img/caffe_bg.png') repeat fixed center; 
-        color: #8e6152;
-        font-family: "Trebuchet MS",Trebuchet,serif;
-        font-size: 12pt;
-        text-shadow: 0 0 0.9em #000000;
+    background:#261712 url('img/caffe_bg.png') repeat fixed center; 
+    color: #8e6152;
+    font-family: "Trebuchet MS",Trebuchet,serif;
+    font-size: 12pt;
+    text-shadow: 0 0 0.9em #000000;
 }
+
 a {
-        color: #755144;
+    color: #755144;
 }
+
 a:hover, a:visited:hover {
-        color: #a47a6b;
+    color: #a47a6b;
 }
+
 .adminbar {
-        clear:both;
-        float:right;
-        font-size: .8em;
+    clear:both;
+    float:right;
+     
+	font-size: .8em;
 }
+
 .desktop-style div.boardlist:nth-child(1) .boardlist {
-background-color: #261712;   
+	background-color: #261712;   
 }
+
 .desktop-style div.boardlist:nth-child(1):hover {
-background-color: #261712;
+	background-color: #261712;
 }
 
 
 .adminbar a {
-        font-weight: bold;
+    font-weight: bold;
 }
+
 .logo {
-        clear:both;
-        text-align:left;
-        font-size:2em;
-        font-weight: bold;
-        color:#a47a6b;
-        /*width:100%;*/
+    clear:both;
+    text-align:left;
+    font-size:2em;
+    font-weight: bold;
+    color:#a47a6b;
+    /*width:100%;*/
 }
+
 .theader, .passvalid {
-       
-        text-align:center;
-        padding:2px;
-        color:#39241d;
-        clear: both;
-        font-weight: bold;
-        margin-bottom: .5em;
-        border: solid 1px #a47a6b;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
+    text-align:center;
+    padding:2px;
+    color:#39241d;
+    clear: both;
+    font-weight: bold;
+    margin-bottom: .5em;
+    border: solid 1px #a47a6b;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
+
 .postarea {
 }
+
 .rules {
         font-size:0.7em;
 }
+
 .postblock {
         background:transparent;
         color:#a47a6b;
         font-weight:bold;
 }
+
 .footer {
         text-align:center;
         font-size:12px;
         font-family:serif;
         margin: 2em 0 0 0;
 }
+
 .dellist {
         font-weight: bold;
         text-align:center;
 }
+
 .delbuttons {
         text-align:center;
         padding-bottom:4px;
 }
+
 .managehead {
         background:#8f6658;
         color:#39241d;
         padding:0px;
 }
+
 .postlists {
         background:#8f6658;
         width:100%;
         padding:0px;
         color:#a47a6b;
 }
+
 .row1 {
         background:#8f6658;
         color:#8f6658;
@@ -208,69 +212,79 @@ background-color: #261712;
         color:#8f6658;
         font-weight:bold;
 }
+
 .postertrip {
-        color:#FF3300;
+    color:#FF3300;
 }
+
 .oldpost {
-        color:#8f6658;
-        font-weight:bold;
+    color:#8f6658;
+    font-weight:bold;
 }
+
 .omittedposts {
-        color:#a47a6b;
+    color:#a47a6b;
 }
-.reply {
-          
-        background:#a47a6b url('img/caffe_reply.png') repeat center; 
-        border: solid 1px #a47a6b;
-        padding: 0;
-        margin: 0;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
+
+.reply {   
+    background:#a47a6b url('img/caffe_reply.png') repeat center; 
+    border: solid 1px #a47a6b;
+    padding: 0;
+    margin: 0;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
+
 blockquote {
-        margin: .5em .5em .5em 1em;
+    margin: .5em .5em .5em 1em;
 }
 blockquote p {
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
 }
 .reply blockquote {
-        margin: .5em;
+    margin: .5em;
 }
 .doubledash {
-        display: none;
-         vertical-align:top;
-        clear:both;
-        float:left;
+    display: none;
+    vertical-align:top;
+    clear:both;
+    float:left;
 }
 .replytitle {
-        font-size: 1.2em;
-        color:#002244;
-        font-weight:bold;
+    font-size: 1.2em;
+    color:#002244;
+    font-weight:bold;
 }
+
 .commentpostername {
-        color:#8f6658;
-        font-weight:800;
+    color:#8f6658;
+    font-weight:800;
 }
+
 .thumbnailmsg {
-        font-size: .8em;
-        color:#8e6152;
+    font-size: .8em;
+    color:#8e6152;
 }
+
 hr {
-        border-style: solid none none none;
-        border-width: 1px;
-        border-color: #8f6658;
+    border-style: solid none none none;
+    border-width: 1px;
+    border-color: #8f6658;
 }
+
 table {
-        border-style: none;
+    border-style: none;
 }
+
 table td {
-        border-style: none;
+    border-style: none;
 }
+
 .nothumb {
-        background-color: #8e6152;
-        border-style: dotted;
-        margin: .3em .5em;
+    background-color: #8e6152;
+    border-style: dotted;
+    margin: .3em .5em;
 }
 
 .abbrev {
@@ -315,7 +329,8 @@ h1 {
 
 .pages {
     background: rgba(88, 53, 41, 0.32) !important;
-    width:100%;
+    width: 100%;
+	box-sizing: border-box; /* fixes 100% overflow with padding*/
     color: #8e6152 !important;
 }
 
@@ -376,21 +391,23 @@ display: table-cell;
 text-align: left;
 border-top: 1px solid rgba(0, 0, 0, 1);
 }
+
 div.boardlist {
-color:  rgba(0, 0, 0, 1);
-font-size: 9pt;
+	color:  rgba(0, 0, 0, 1);
+	font-size: 9pt;
 }
 
 /* options.js */
 #options_div, #alert_div {
-  background: #a47a6b url('img/caffe_reply.png') repeat center;
-  border: solid 1px #a47a6b;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  	background: #a47a6b url('img/caffe_reply.png') repeat center;
+  	border: solid 1px #a47a6b;
+  	-moz-border-radius: 5px;
+  	border-radius: 5px;
 }
 .options_tab_icon {
-  color: inherit;
+  	color: inherit;
 }
+
 #options_tablist {
-  border-color: #a47a6b;
+  	border-color: #a47a6b;
 }

@@ -25,7 +25,7 @@ $pages = [
 	'/logout'				=> 'secure logout',		// logout
 
 	'/users'				=> 'users',			// manage users
-	'/users/(\d+)/(promote|demote)'		=> 'secure user_promote',	// prmote/demote user
+	'/users/(\d+)/(promote|demote)'		=> 'secure user_promote',	// promote/demote user
 	'/users/(\d+)'				=> 'secure_POST user',		// edit user
 	'/users/new'				=> 'secure_POST user_new',	// create a new user
 

@@ -32,9 +32,7 @@
  */
 
 	// Global announcement -- the very simple version.
-	// This used to be wrongly named $config['blotter'] (still exists as an alias).
 	// $config['global_message'] = 'This is an important announcement!';
-	$config['blotter'] = &$config['global_message'];
 
 	// Automatically check if a newer version of vichan is available when an administrator logs in.
 	$config['check_updates'] = false;
@@ -117,11 +115,6 @@
 	$config['db']['server'] = 'localhost';
 	// Example: Unix socket
 	// $config['db']['server'] = ':/tmp/mysql.sock';
-	// Login
-	$config['db']['user'] = '';
-	$config['db']['password'] = '';
-	// vichan database
-	$config['db']['database'] = '';
 	// Table prefix (optional)
 	$config['db']['prefix'] = '';
 	// Use a persistent database connection when possible
@@ -726,7 +719,7 @@
 		// Inline dice roll markup.
 		// dont work out of the box
 		// [ "/!([-+]?\d+)?([d])([-+]?\d+)([-+]\d+)?/iu", fn($m) => inline_dice_roll_markup($m, 'static/d10.svg') ],
-		// "Wiki" markup syntax ($config['wiki_markup'] in pervious versions):
+		// "Wiki" markup syntax:
 		[ "/'''(.+?)'''/", "<strong>\$1</strong>" ],
 		[ "/''(.+?)''/", "<em>\$1</em>" ],
 		[ "/\*\*(.+?)\*\*/", "<span class=\"spoiler\">\$1</span>" ],

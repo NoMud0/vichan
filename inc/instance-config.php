@@ -10,14 +10,15 @@
 
 
 
-	// Database stuff
-	$config['db']['type']		= 'mysql';
-	$config['db']['server']		= 'localhost';
-	$config['db']['user']		= '';
-	$config['db']['password']	= '';
-	$config['db']['database']	= '';
+	$config['stylesheets']['Burichan'] = 'burichan.css';
+	$config['stylesheets']['Caffe'] = 'caffe.css';
+	$config['stylesheets']['Futaba'] = 'futaba.css';
+	$config['stylesheets']['Confraria'] = 'confraria.css';
+	$config['stylesheets']['Dark'] = 'dark.css';
+	$config['stylesheets']['Dark Roach'] = 'dark_roach.css';
+	$config['stylesheets']['Favela'] = 'favela.css';
 	
-	//$config['root']				= '/';
-	
+	$config['stylesheets_board'] = true;
+
 	@include('inc/secrets.php');
 ?>
