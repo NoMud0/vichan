@@ -27,6 +27,8 @@
 		<option value="random:desc">{% trans 'Random' %}</option>
 	</select>
 
+	&nbsp;
+
 	<span>{% trans 'Image size' %}: </span>
 	<select id="image_size" style="display: inline-block">
 		<option value="vsmall">{% trans 'Very small' %}</option>
@@ -51,7 +53,7 @@
 						{% else %}
 							<img src="{{post.file}}"
 						{% endif %}
-						id="img-{{ post.id }}" data-subject="{% if post.subject %}{{ post.subject|e }}{% endif %}" data-name="{{ post.name|e }}" data-muhdifference="{{ post.muhdifference }}" class="{{post.board}} thread-image" title="{{post.bump|date('%b %d %H:%M')}} {% if config.content_lazy_loading %}loading="lazy"{% endif %}">
+						id="img-{{ post.id }}" data-subject="{% if post.subject %}{{ post.subject|e }}{% endif %}" data-name="{{ post.name|e }}" data-muhdifference="{{ post.muhdifference }}" class="{{post.board}} thread-image" title="{{post.bump|date('M d H:i')}} {% if config.content_lazy_loading %}loading="lazy"{% endif %}">
 					</a>
 						<div class="replies">
 							<strong>R: {{ post.reply_count }} / I: {{ post.image_count }}{% if post.sticky %} (sticky){% endif %}</strong>

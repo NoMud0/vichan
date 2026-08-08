@@ -20,5 +20,11 @@
 	
 	$config['stylesheets_board'] = true;
 
+	$config['additional_javascript'][] = 'js/style-select.js';
+
+	$config['additional_javascript'][] = 'js/options.js';
+	$config['additional_javascript'][] = 'js/options/general.js';
+	$config['additional_javascript'][] = 'js/hide-form.js';
+
 	@include('inc/secrets.php');
 ?>

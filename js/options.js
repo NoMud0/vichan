@@ -6,6 +6,7 @@
  * Usage:
  *   $config['additional_javascript'][] = 'js/jquery.min.js';
  *   $config['additional_javascript'][] = 'js/options.js';
+ *   $config['additional_javascript'][] = 'js/options/general.js';
  */
 
 +function(){
